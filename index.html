@@ -7,18 +7,31 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styles/standard.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
+    <script src="./scripts/template.js"></script>
     <script src="script.js"></script>
   </head>
   <body onload="renderNotes()">
     <h1>Notizblock</h1>
-    <h2>Notizen:</h2>
-    <div id="content"></div>
 
-    <div>
+    <div class="note-input">
+      <h2>Title</h2>
+      <input id="noteTitle_input" type="text" />
+      <h2>Notiz</h2>
       <input id="note_input" type="text" />
-      <button onclick="addNote()">Notiz hinzufügen</button>
+      <button class="btn-save" onclick="addNote(), addNoteTitle()">
+        Notiz hinzufügen
+      </button>
     </div>
-    <h2>Trash:</h2>
-    <div id="input_trash"></div>
+    <h2>Notizen</h2>
+    <div class="content-container" id="content">
+      <button class="btn" onclick="noteToTrash(1)"></button>
+    </div>
+    <h2>Archiv</h2>
+    <div class="archive-container" id="input_archive"></div>
+
+    <h2>Mülleimer:</h2>
+    <div class="trash-container" id="input_trash">
+      <button class="btn" onclick="deleteNote()"></button>
+    </div>
   </body>
 </html>

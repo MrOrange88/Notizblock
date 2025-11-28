@@ -1,8 +1,33 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron /Orbitron-VariableFont_wght.ttf")
+      format("woff2"),
+    url("../assets/fonts/Orbitron /Orbitron-VariableFont_wght") format("woff");
+  font-weight: normal, bold;
+  font-style: normal;
+}
 * {
+  color: white;
+  font-family: "Orbitron", sans-serif;
   box-sizing: border-box;
   margin: 0;
   scroll-behavior: smooth;
+  background-color: black;
+}
+p {
+  color: white;
 }
 a {
   text-decoration: none;
+  color: white;
+}
+h1 {
+  margin: 24px;
+  text-align: center;
+  color: white;
+}
+h2 {
+  color: white;
+  margin: 24px;
+  text-align: center;
 }

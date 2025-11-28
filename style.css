@@ -1,0 +1,13 @@
+.note-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  text-align: center;
+}
+.trash-container {
+  display: flex;
+  justify-content: center;
+}
