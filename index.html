@@ -10,7 +10,7 @@
     <script src="./scripts/template.js"></script>
     <script src="script.js"></script>
   </head>
-  <body onload="renderNotes()">
+  <body onload="init()">
     <h1>Notizblock</h1>
 
     <div class="note-input">
@@ -18,14 +18,12 @@
       <input id="noteTitle_input" type="text" />
       <h2>Notiz</h2>
       <input id="note_input" type="text" />
-      <button class="btn-save" onclick="addNote(), addNoteTitle()">
-        Notiz hinzufügen
-      </button>
+      <button class="btn-save" onclick="addNewNote()">Notiz hinzufügen</button>
     </div>
+
     <h2>Notizen</h2>
-    <div class="content-container" id="content">
-      <button class="btn" onclick="noteToTrash(1)"></button>
-    </div>
+    <div class="content-container" id="content"></div>
+
     <h2>Archiv</h2>
     <div class="archiv-container" id="archiv_content"></div>
 
