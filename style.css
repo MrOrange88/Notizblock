@@ -8,6 +8,8 @@
   text-align: center;
 }
 .trash-container {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+}
+.archiv-container {
+  text-align: center;
 }
