@@ -65,12 +65,12 @@ function addNewNote() {
   const title = titleInputRef.value.trim();
   const text = noteInputRef.value.trim();
 
-  if (!title && !text) {
+  if (!title || !text) {
     return;
   }
 
-  allNotes.notesTitles.push(title || "Ohne Titel");
-  allNotes.notes.push(text || "");
+  allNotes.notesTitles.push(title);
+  allNotes.notes.push(text);
 
   renderNotes();
   saveToLocalStorage();
