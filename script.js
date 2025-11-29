@@ -1,6 +1,6 @@
 let allNotes = {
-  notesTitles: ["Ba", "Aufgabe"],
-  notes: ["banana", "rasen mähen"],
+  notesTitles: ["Ba"],
+  notes: ["banana"],
   archivNotesTitles: [],
   archivNotes: [],
   trashNotesTitles: [],
