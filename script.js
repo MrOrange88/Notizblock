@@ -8,7 +8,10 @@ let allNotes = {
 };
 
 function init() {
+  getFromLocalStorage();
   renderNotes();
+  renderArchivNotes();
+  renderTrashNotes();
 }
 
 function moveNote(indexNote, startKey, destinationKey) {
@@ -32,6 +35,7 @@ function renderNotes() {
     contentRef.innerHTML += getNoteTemplate(indexNote);
   }
 }
+
 function renderArchivNotes() {
   let archivContentRef = document.getElementById("archiv_content");
   archivContentRef.innerHTML = "";

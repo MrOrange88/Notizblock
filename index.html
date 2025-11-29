@@ -1,33 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notizblock</title>
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styles/standard.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
-    <script src="./scripts/template.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles/standard.css" />
+
+    <script src="./scripts/template.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
   <body onload="init()">
-    <h1>Notizblock</h1>
+    <h1 class="main-title">Notizblock</h1>
 
-    <div class="note-input">
-      <h2>Title</h2>
-      <input id="noteTitle_input" type="text" />
-      <h2>Notiz</h2>
-      <input id="note_input" type="text" />
-      <button class="btn-save" onclick="addNewNote()">Notiz hinzufügen</button>
-    </div>
+    <main class="app">
+      <!-- Neue Notiz -->
+      <section class="note-input">
+        <h2>Neue Notiz</h2>
 
-    <h2>Notizen</h2>
-    <div class="content-container" id="content"></div>
+        <label for="noteTitle_input">Titel</label>
+        <input id="noteTitle_input" type="text" placeholder="Titel eingeben" />
 
-    <h2>Archiv</h2>
-    <div class="archiv-container" id="archiv_content"></div>
+        <label for="note_input">Notiz</label>
+        <input id="note_input" type="text" placeholder="Notiztext eingeben" />
 
-    <h2>Mülleimer:</h2>
-    <div class="trash-container" id="input_trash"></div>
+        <button class="btn-save" onclick="addNewNote()">
+          Notiz hinzufügen
+        </button>
+      </section>
+
+      <section class="notes-section">
+        <h2>Notizen</h2>
+        <div class="content-container" id="content"></div>
+      </section>
+
+      <section class="notes-section">
+        <h2>Archiv</h2>
+        <div class="archiv-container" id="archiv_content"></div>
+      </section>
+
+      <section class="notes-section">
+        <h2>Mülleimer</h2>
+        <div class="trash-container" id="input_trash"></div>
+      </section>
+    </main>
   </body>
 </html>
